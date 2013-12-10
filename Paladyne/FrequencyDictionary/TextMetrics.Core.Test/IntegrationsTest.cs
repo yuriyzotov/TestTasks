@@ -131,28 +131,27 @@ namespace TextMetrics.Core.Test
             using (var sw = new StreamWriter(filePath, false, Encoding.GetEncoding(1251)))
             {
                 var buffer = new StringBuilder();
-                for (int i = 0; i < /*1024 **/100 * 1024 * 1024; i++)
+                for (int i = 0; i < 100 * 1024 * 1024; i++)
                 {
                     var index = rnd.Next(0, 13);
-                    if (index == 10)
+                    switch (index)
                     {
-                        sw.WriteLine(buffer.ToString());
-                        buffer.Clear();
-                    }
-                    else if (index == 11)
-                    {
-                        buffer.Append(".");
-                    }
-                    else if (index == 12)
-                    {
-                        buffer.Append(",");
-                    }
-                    else
-                    {
-                        var word = words.Keys.ElementAt(index);
-                        buffer.Append(word);
-                        buffer.Append(" ");
-                        words[word] += 1;
+                        case 12:
+                            buffer.Append(",");
+                            break;
+                        case 11:
+                            buffer.Append(".");
+                            break;
+                        case 10:
+                            sw.WriteLine(buffer.ToString());
+                            buffer.Clear();
+                            break;
+                        default:
+                            var word = words.Keys.ElementAt(index);
+                            buffer.Append(word);
+                            buffer.Append(" ");
+                            words[word] += 1;
+                            break;
                     }
                 }
                 if (buffer.Length != 0)

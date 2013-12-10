@@ -15,6 +15,36 @@ namespace TextMetrics.Core.Test
     public class IntegrationsTest
     {
 
+        [TestMethod]
+        public void TestHugeFile()
+        {
+
+            var words = new Dictionary<string, long>();
+            while (words.Keys.Count < 10)
+            {
+                var word = GenerateWord();
+                words[word] = 0;
+            }
+
+            //generate file and calculate metrics
+            var filePath = Path.GetTempFileName();
+            GenerateHugeFile(words, filePath);
+
+            var outFileName = filePath + ".out";
+            var parser = new TextMetricsCalculator(new ConfigurationMock(filePath, outFileName));
+            parser.Calculate(true);
+
+            try
+            {
+                CheckResults(words, outFileName);
+            }
+            finally
+            {
+                File.Delete(filePath);
+                File.Delete(outFileName);
+            }
+        }
+
         private class ConfigurationMock : ITextMetricsConfiguration
         {
             private string myInPath;
@@ -63,36 +93,6 @@ namespace TextMetrics.Core.Test
                 word += myLetters[index];
             }
             return word;
-        }
-
-        [TestMethod]
-        public void TestHugeFile()
-        {
-
-            var words = new Dictionary<string,long>();
-            while(words.Keys.Count<10)
-            {
-                var word = GenerateWord();
-                words[word] = 0;
-            }
-
-            //generate file and calculate metrics
-            var filePath = Path.GetTempFileName();
-            GenerateHugeFile(words, filePath);
-
-            var outFileName = filePath+".out";
-            var parser = new TextMetricsCalculator(new ConfigurationMock(filePath, outFileName));
-            parser.Calculate(true);
-
-            try
-            {
-                CheckResults(words, outFileName);
-            }
-            finally
-            {
-                File.Delete(filePath);
-                File.Delete(outFileName);
-            }
         }
 
         private static void CheckResults(Dictionary<string, long> words, string outFileName)

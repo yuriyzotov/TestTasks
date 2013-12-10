@@ -11,6 +11,7 @@ namespace TextMetrics.Core.TextMetrics
 {
     /// <summary>
     /// used to configure the text metrics processor
+    /// can use the DI framework to create realisations
     /// </summary>
     public interface ITextMetricsConfiguration
     {

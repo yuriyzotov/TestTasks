@@ -48,7 +48,7 @@
     <Compile Include="Parsers\ITextParser.cs" />
     <Compile Include="Parsers\ITokensParserStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TextMetrics\IConfiguration.cs" />
+    <Compile Include="TextMetrics\ITextMetricsConfiguration.cs" />
     <Compile Include="TextMetrics\TextMetricsCalculator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,26 +7,38 @@ using System.Text.RegularExpressions;
 
 namespace TextMetrics.Core.TextMetrics
 {
+    /// <summary>
+    /// specific implementation of text metrics calculation algorithm 
+    ///     /// </summary>
     public class TextMetricsCalculator
     {
         private ITextMetricsConfiguration myConfiguration;
 
+        /// <summary>
+        /// use configuration to assemble dendensies
+        /// </summary>
+        /// <param name="configuration"></param>
         public TextMetricsCalculator(ITextMetricsConfiguration configuration)
         {
             myConfiguration = configuration;
         }
         
+        /// <summary>
+        /// calculate metrics
+        /// </summary>
+        /// <param name="useParallelComputing"></param>
         public void Calculate(bool useParallelComputing)
         {
             var aggregator = myConfiguration.CreateTokenAggregator();
             var parsingStrategy = myConfiguration.CreateTokenParserStrategy();
 
-            //setup parsing delegate
+            //setup parsing-aggregation delegate
             Action<string> tokenParsingAction = 
                 (line) =>  parsingStrategy.Parse(line).All(
                     token => { aggregator.Aggregate(token); return true; }
              );
 
+            //check if it is possible to use parallel computing
             if (useParallelComputing && aggregator.IsSynchronized)
             {
                 myConfiguration.CreateTextParser().Parse().AsParallel().ForAll(tokenParsingAction);
@@ -38,7 +50,7 @@ namespace TextMetrics.Core.TextMetrics
                     tokenParsingAction(line);
                 }
             }
-            //create output file
+            //save results
             myConfiguration.CreateAggregationStorage().SaveAggregation(aggregator);
         }
     }

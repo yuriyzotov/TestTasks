@@ -7,6 +7,9 @@ using System.Text;
 
 namespace TextMetrics.Core.Aggregators.Storage
 {
+    /// <summary>
+    /// save aggreagation in the text file with special format
+    /// </summary>
     public class TextFileAggregationStorage : IAggregeationStorage
     {
         private string myOutputFile;
@@ -17,6 +20,7 @@ namespace TextMetrics.Core.Aggregators.Storage
             myOutputFile = filename;
             myEncoding = encoding;
         }
+
         public void SaveAggregation(ITokensAggregator aggregator)
         {
             using (var writer = new StreamWriter(myOutputFile, false, myEncoding))

@@ -6,6 +6,10 @@ using System.Text;
 
 namespace TextMetrics.Core.Parsers
 {
+    /// <summary>
+    /// text file parser, supposed that file must be in pointed encoding
+    /// and not binary
+    /// </summary>
     public class FileTextParser: ITextParser
     {
         private string myInputFile;
@@ -15,14 +19,20 @@ namespace TextMetrics.Core.Parsers
         {
             this.myInputFile = filename;
             this.myEncoding = encoding;
+            
             if (!File.Exists(myInputFile))
                 throw new System.IO.FileNotFoundException("Input file not found", myInputFile);
+            
             VerifyFile();
         }
 
+        /// <summary>
+        /// parse text file and return enumeration of lines
+        /// uses yield to return control to caller to immediate process of line
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<string> Parse()
         {
-            
             using(var fStream = new StreamReader(myInputFile,myEncoding))
             {
                 string line = null;
@@ -33,6 +43,10 @@ namespace TextMetrics.Core.Parsers
             }
         }
 
+
+        /// <summary>
+        /// internal method to verify is file is text and in valid encoding
+        /// </summary>
         private void VerifyFile()
         {
             var buffer = new char[10240];
@@ -51,10 +65,10 @@ namespace TextMetrics.Core.Parsers
             }
 
             //Look for 4 consecutive binary zeroes, if they are exists file is supposed to be binary
-            //or it is length >1000 but does not contain any endline symbol
+            //or it is length >1000 character but does not contain any endline symbol
             if (sampleContent.Contains("\0\0\0\0") ||
                 (sampleContent.Length>500 && !sampleContent.Contains(Environment.NewLine)))
-                throw new ApplicationException("Wrong input file, looks like it is binary.");
+                    throw new ApplicationException("Wrong input file, looks like it is binary.");
         }
     }
 }

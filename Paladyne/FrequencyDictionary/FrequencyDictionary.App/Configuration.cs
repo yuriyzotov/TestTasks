@@ -11,6 +11,9 @@ using TextMetrics.Core.TextMetrics;
 
 namespace FrequencyDictionary.App
 {
+    /// <summary>
+    /// define configuration for text metrics in the console application
+    /// </summary>
     public class Configuration : ITextMetricsConfiguration
     {
         
@@ -31,6 +34,8 @@ namespace FrequencyDictionary.App
 
             myInputFileName = args[0];
             myOutputFileName = args[1];
+            
+            //setup encoding by value from config
             try
             {
                 if (!string.IsNullOrWhiteSpace(ConfigurationManager.AppSettings["FileEncoding"]))

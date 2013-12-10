@@ -14,7 +14,7 @@ namespace FrequencyDictionary.App
         {
             try
             {
-                //parse input arguments
+                //parse input arguments and prepare calculator
                 var parser = new TextMetricsCalculator(new Configuration(args));
                 //make calculation of metric
                 parser.Calculate(true);

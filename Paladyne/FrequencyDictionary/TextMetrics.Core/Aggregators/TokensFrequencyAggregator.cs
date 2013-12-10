@@ -17,19 +17,30 @@ namespace TextMetrics.Core.Aggregators
         private ConcurrentDictionary<string, long> myTokensDictionary = new ConcurrentDictionary<string, long>();
         
         
+        /// <summary>
+        /// just calculate amount of words case insensitive
+        /// </summary>
+        /// <param name="token"></param>
         public void Aggregate(string token)
         {
             if (string.IsNullOrEmpty(token))
                 return;
             myTokensDictionary.AddOrUpdate(token.ToLowerInvariant(),1,(k,v)=>v+1);
         }
-
+        
+        /// <summary>
+        /// return ordered enumeration of the word frequency
+        /// order descending by frequencies figures
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<KeyValuePair<string, long>> GetAggregation()
         {
             return myTokensDictionary.OrderByDescending(pair => pair.Value);
         }
 
-
+        /// <summary>
+        /// this aggregator is synchronized
+        /// </summary>
         public bool IsSynchronized
         {
             get { return true; }

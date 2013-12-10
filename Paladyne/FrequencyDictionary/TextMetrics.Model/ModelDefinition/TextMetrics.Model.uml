@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="695e89fa-5543-4b8d-8a57-b6f3641111bb"
+  name="TextMetrics.Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="ce3ff8a7-06da-4469-9554-429fddd43432">
+      <body>Realised algorithm for calculate text metrics
+
+</body>
+      <annotatedElements>
+        <componentMoniker
+          Id="4ce40ae8-8af7-4f2d-93eb-da3555dfee5e"
+          LastKnownName="Text metrics calculator"
+          LastKnownLocation="TextMetrics.Model.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="78a16829-96ae-4618-a9c6-b06bef502d8c">
+      <profileInstance
+        Id="32a70398-cc83-4a1b-be3c-8ad1b571eb74"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <component
+        Id="290ecf61-cd9c-4ad2-8ee0-f3d25164a96d"
+        name="Component1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="1255ab3c-11f3-4111-b05c-fa80a364be9d"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="25e08547-3933-4c0e-bc67-9ddf22917588"
+                LastKnownName="Interface1"
+                LastKnownLocation="TextMetrics.Model.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="25e08547-3933-4c0e-bc67-9ddf22917588"
+        name="Interface1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="16fa5741-765e-48ab-bec7-d14cf3c57d80"
+        name="Class1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="7ee80c03-2909-4fb0-a001-17940b7ff9c5"
+        LastKnownName="TextMetrics"
+        LastKnownLocation="Package_2310.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d35179ff-e6d4-46e9-838b-853a702204f7"
+        LastKnownName="System"
+        LastKnownLocation="Package3_2310.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="a7c87995-393e-4d5d-aafb-9a7726c5c01c"
+        name="Text Parser"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="2a54e914-c843-44c5-b3cb-f573f6b5600b"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="079b366d-eff6-4853-b11d-40d2e2641ce5"
+                LastKnownName="ITextParser"
+                LastKnownLocation="TextMetrics.Model.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="283ee72c-3068-494c-a368-a32f5d74709c"
+        name="Token Parser"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="0d547468-063d-496d-885d-6587af6d2da4"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="a03ad9d1-44d2-40f2-8e1d-9cece5289bed"
+                LastKnownName="ITokensParserStrategy"
+                LastKnownLocation="TextMetrics.Model.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="079b366d-eff6-4853-b11d-40d2e2641ce5"
+        name="ITextParser"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a03ad9d1-44d2-40f2-8e1d-9cece5289bed"
+        name="ITokensParserStrategy"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="01a49a6e-3aad-45ff-af1c-991bf94a82d3"
+        name="Token Aggregator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="8c047496-6347-4895-9f93-42c23aec65e9"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="9bcabaf3-932f-4319-9809-e3583ca833f7"
+                LastKnownName="ITokensAggregator"
+                LastKnownLocation="TextMetrics.Model.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="9bcabaf3-932f-4319-9809-e3583ca833f7"
+        name="ITokensAggregator"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="4ce40ae8-8af7-4f2d-93eb-da3555dfee5e"
+        name="Text metrics calculator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="e07e0554-4484-489b-91ed-b12213bdc585">
+            <providedInterfaceMoniker
+              Id="8ac844c7-47b7-4c74-a034-ac8ee94b9598"
+              LastKnownName="Port1"
+              LastKnownLocation="TextMetrics.Model.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="1409bc01-e7e2-4a88-924b-b6452b76ce47"
+        name="Aggregation data Storage"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="f1327ddb-eca3-46c0-b5fb-f32eeff025fd"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="bf7b8079-aff5-4c0d-9724-9a60d34c3539"
+                LastKnownName="IAggregeationStorage"
+                LastKnownLocation="TextMetrics.Model.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="bf7b8079-aff5-4c0d-9724-9a60d34c3539"
+        name="IAggregeationStorage"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="3ca3b23a-47c7-44a5-ac36-f710a8aec320"
+        name="ITextMetricsConfiguration"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="e6d78431-436f-4d91-a34b-890c0a1be7f7"
+        name="Configuration"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="d6b2d90b-33df-456d-8e23-9e1a0746adc1">
+            <providedInterfaceMoniker
+              Id="8c047496-6347-4895-9f93-42c23aec65e9"
+              LastKnownName="Port1"
+              LastKnownLocation="TextMetrics.Model.uml" />
+          </dependency>
+          <dependency
+            Id="493d5677-eb86-4f5a-bfca-bb27db8b75d9">
+            <providedInterfaceMoniker
+              Id="0d547468-063d-496d-885d-6587af6d2da4"
+              LastKnownName="Port1"
+              LastKnownLocation="TextMetrics.Model.uml" />
+          </dependency>
+          <dependency
+            Id="78b07703-a0f0-4603-af85-b112c4a60b6f">
+            <providedInterfaceMoniker
+              Id="2a54e914-c843-44c5-b3cb-f573f6b5600b"
+              LastKnownName="Port1"
+              LastKnownLocation="TextMetrics.Model.uml" />
+          </dependency>
+          <dependency
+            Id="c2c799b1-ff4d-4174-b7ac-e443adfb903a">
+            <providedInterfaceMoniker
+              Id="f1327ddb-eca3-46c0-b5fb-f32eeff025fd"
+              LastKnownName="Port1"
+              LastKnownLocation="TextMetrics.Model.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="8ac844c7-47b7-4c74-a034-ac8ee94b9598"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="de8251f1-b658-481f-95c3-f4732c9c0efd"
+                LastKnownName="ITextMetricsConfiguration"
+                LastKnownLocation="TextMetrics.Model.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="de8251f1-b658-481f-95c3-f4732c9c0efd"
+        name="ITextMetricsConfiguration"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="c518f8c8-615f-41a1-89a6-ff09f1f4a96a"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="51ef3f7e-ebee-4037-afbb-15d37628cb01"
+            name="Initial1"
+            isLeaf="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="995f272e-3773-43c3-9527-74bbba18a509"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <objectNodeMoniker
+                  Id="c62b1bd2-e475-453b-a54f-057611c4cc61"
+                  LastKnownName="Input text file"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+          </initialNode>
+          <objectNode
+            Id="c62b1bd2-e475-453b-a54f-057611c4cc61"
+            name="Input text file"
+            isLeaf="false"
+            ordering="Unordered"
+            isControlType="false">
+            <objectFlowTargets>
+              <objectFlow
+                Id="70381463-d45f-4b39-9eea-15e36d6017fa"
+                isLeaf="false"
+                isMulticast="false"
+                isMultireceive="false">
+                <opaqueActionMoniker
+                  Id="374a9d4b-47cc-4ceb-9c9a-b9c2e4051b0a"
+                  LastKnownName="Start application and get the file as argument"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger
+                Id="9fb9a0c9-6447-4284-ac8e-41ba7677ff22"
+                name="2147483647"
+                value="2147483647" />
+            </upperBound>
+          </objectNode>
+          <opaqueAction
+            Id="374a9d4b-47cc-4ceb-9c9a-b9c2e4051b0a"
+            name="Start application and get the file as argument"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="34d3e910-233f-4a4f-8690-949f1b78e1a9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="577de3b0-18f5-4113-b323-fa641fad6f55"
+                  LastKnownName="Create configuration and TextMetricsCalculator"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="577de3b0-18f5-4113-b323-fa641fad6f55"
+            name="Create configuration and TextMetricsCalculator"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="eda055d0-e788-4e06-8291-c3dea03471ec"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="dae2ca53-532f-4431-b4dd-c91ded1f4f41"
+                  LastKnownName="Create text parser and parse input file by lines"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="dae2ca53-532f-4431-b4dd-c91ded1f4f41"
+            name="Create text parser and parse input file by lines"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="da313a05-66cf-42f6-bb11-da3cb1919dba"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="38cdecd8-03fd-4e33-a9bc-a5a2c43fe1a4"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="38cdecd8-03fd-4e33-a9bc-a5a2c43fe1a4"
+            name="Fork1"
+            isLeaf="false">
+            <description>Process lines in parallel</description>
+            <flowNodeTargets>
+              <controlFlow
+                Id="6eb2419a-5899-41ca-9ca0-5d8c4d16294e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2a568074-8e1a-4c66-a6be-2bbaf361a8e5"
+                  LastKnownName="Parse first line by tokens (words)"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="b6ab8d69-9c2a-47a6-aacc-89eb397f7391"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="042e8f1e-91a0-48ab-9b37-a7cdc804635d"
+                  LastKnownName="Parse second line by tokens (words)"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="b33544a4-ef14-4c9a-89e8-22be4ef1aece"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="31a01d4b-9210-447c-b1d1-3c8e2c41f87c"
+                  LastKnownName="Parse Nth line by tokens (words)"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="2a568074-8e1a-4c66-a6be-2bbaf361a8e5"
+            name="Parse first line by tokens (words)"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3eddc986-452f-4546-9e2e-740244af87e6"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="c7ad524e-b11b-4565-b5d8-6e9327709cfe"
+                  LastKnownName="Join1"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="042e8f1e-91a0-48ab-9b37-a7cdc804635d"
+            name="Parse second line by tokens (words)"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d05f7605-75bf-47e4-8523-314a332dd314"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="c7ad524e-b11b-4565-b5d8-6e9327709cfe"
+                  LastKnownName="Join1"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="31a01d4b-9210-447c-b1d1-3c8e2c41f87c"
+            name="Parse Nth line by tokens (words)"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="03ee625d-7fe5-4e16-bd4e-d0092212847c"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="c7ad524e-b11b-4565-b5d8-6e9327709cfe"
+                  LastKnownName="Join1"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode
+            Id="c7ad524e-b11b-4565-b5d8-6e9327709cfe"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="41135ea1-c3c2-4813-a5e4-a5babef8adc9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="91eba552-51b3-4fba-a1c7-d8807db09684"
+                  LastKnownName="Aggregate tokens in aggregator (calculate words frequency)"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction
+            Id="91eba552-51b3-4fba-a1c7-d8807db09684"
+            name="Aggregate tokens in aggregator (calculate words frequency)"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="28abd80f-e71f-4dbb-92b5-8653e759a8da"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e2d919ef-11fa-41d0-8ca3-8701bf0054f0"
+                  LastKnownName="Save aggregations into the text file"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e2d919ef-11fa-41d0-8ca3-8701bf0054f0"
+            name="Save aggregations into the text file"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="239c8fad-338d-407a-9a12-93efd153fa74"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="4b167878-b3ad-4751-822f-8542c9892103"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="TextMetrics.Model.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="4b167878-b3ad-4751-822f-8542c9892103"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

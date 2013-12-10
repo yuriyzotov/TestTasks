@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="5e08da98-a4ad-4946-aa94-e0869bfc80e8" name="TextMetricsDiagram" linkedPackageId="74db9146-0b80-4975-aff8-cd4c1c52619b" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <ownedCommentsInternal>
+    <comment Id="c971d74d-28a2-45a4-834b-4562fdd266b3">
+      <elementDefinition Id="ce3ff8a7-06da-4469-9554-429fddd43432" />
+      <body>Realised algorithm for calculate text metrics
+
+</body>
+      <annotatedElements>
+        <componentMoniker Id="715ee3ca-b717-4807-97ba-8d4acd9449ba" LastKnownName="Text metrics calculator" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="2625262e-f671-4ff9-8c83-a353c3e5ed26">
+      <profileInstance Id="b730dab7-bc89-4be0-ba76-fb67daf9cc1a" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5e859c49-2778-4670-8248-b6ae7854f712">
+      <profileInstance Id="aa58e894-3597-4fda-93ef-915fc32cbc0b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6093e694-c120-4532-bf39-39dd6a0c0628">
+      <profileInstance Id="a35b559e-41b5-4a47-a5ff-c2158fd14094" name="CSharpProfile">
+        <elementDefinition Id="32a70398-cc83-4a1b-be3c-8ad1b571eb74" />
+      </profileInstance>
+      <elementDefinition Id="78a16829-96ae-4618-a9c6-b06bef502d8c" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="46b439f9-a601-4399-9c61-898587198ff9" name="Text Parser" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a7c87995-393e-4d5d-aafb-9a7726c5c01c" />
+        <ownedAttributesInternal>
+          <providedInterface Id="b1d536ff-2324-400f-b78c-ce6c0f7b4349" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="2a54e914-c843-44c5-b3cb-f573f6b5600b" />
+            <type_NamedElement>
+              <interfaceMoniker Id="7e99efa9-5db1-4f4a-bd54-ba6b603da417" LastKnownName="ITextParser" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="f534d912-a3e0-4c42-a703-6da0b019e700" name="Token Parser" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="283ee72c-3068-494c-a368-a32f5d74709c" />
+        <ownedAttributesInternal>
+          <providedInterface Id="08a51541-0e76-43bb-85c5-2f21d90e4689" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="0d547468-063d-496d-885d-6587af6d2da4" />
+            <type_NamedElement>
+              <interfaceMoniker Id="4bf182c3-2dff-4fec-9d1d-d60c105bc764" LastKnownName="ITokensParserStrategy" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="7e99efa9-5db1-4f4a-bd54-ba6b603da417" name="ITextParser" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="079b366d-eff6-4853-b11d-40d2e2641ce5" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="4bf182c3-2dff-4fec-9d1d-d60c105bc764" name="ITokensParserStrategy" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a03ad9d1-44d2-40f2-8e1d-9cece5289bed" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="ec189f5a-0b65-489e-b944-8297c973d9d8" name="Token Aggregator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="01a49a6e-3aad-45ff-af1c-991bf94a82d3" />
+        <ownedAttributesInternal>
+          <providedInterface Id="8043da7e-d7ac-43ef-819d-67dd94fb6c06" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="8c047496-6347-4895-9f93-42c23aec65e9" />
+            <type_NamedElement>
+              <interfaceMoniker Id="763548d9-1b23-438e-9c65-1e4ecbe39792" LastKnownName="ITokensAggregator" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="763548d9-1b23-438e-9c65-1e4ecbe39792" name="ITokensAggregator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9bcabaf3-932f-4319-9809-e3583ca833f7" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="715ee3ca-b717-4807-97ba-8d4acd9449ba" name="Text metrics calculator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4ce40ae8-8af7-4f2d-93eb-da3555dfee5e" />
+        <suppliersInternal>
+          <dependency Id="e60e23b6-64e4-4033-8b3c-97842499b94f">
+            <providedInterfaceMoniker Id="184cbf5b-3f55-4b3f-9423-979338e86d09" LastKnownName="Port1" />
+            <elementDefinition Id="e07e0554-4484-489b-91ed-b12213bdc585" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="48e78167-debd-4c82-a963-6ad3bf8e8119" name="Aggregation data Storage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1409bc01-e7e2-4a88-924b-b6452b76ce47" />
+        <ownedAttributesInternal>
+          <providedInterface Id="a0080210-2f75-48ec-b6e5-21bb404cbba5" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="f1327ddb-eca3-46c0-b5fb-f32eeff025fd" />
+            <type_NamedElement>
+              <interfaceMoniker Id="2321b6bb-2804-4a7a-911b-c0ece0cd7604" LastKnownName="IAggregeationStorage" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="2321b6bb-2804-4a7a-911b-c0ece0cd7604" name="IAggregeationStorage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bf7b8079-aff5-4c0d-9724-9a60d34c3539" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="7c5743b4-c15b-449a-9e86-dab0b0a69163" name="Configuration" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e6d78431-436f-4d91-a34b-890c0a1be7f7" />
+        <suppliersInternal>
+          <dependency Id="24ea90a4-99fa-4bf4-8e7c-f815d7234815">
+            <providedInterfaceMoniker Id="8043da7e-d7ac-43ef-819d-67dd94fb6c06" LastKnownName="Port1" />
+            <elementDefinition Id="d6b2d90b-33df-456d-8e23-9e1a0746adc1" />
+          </dependency>
+          <dependency Id="3e184e8e-e415-4eab-82ba-787a7ade3ccd">
+            <providedInterfaceMoniker Id="08a51541-0e76-43bb-85c5-2f21d90e4689" LastKnownName="Port1" />
+            <elementDefinition Id="493d5677-eb86-4f5a-bfca-bb27db8b75d9" />
+          </dependency>
+          <dependency Id="2183d3a4-edad-4903-a978-6f4f68065260">
+            <providedInterfaceMoniker Id="b1d536ff-2324-400f-b78c-ce6c0f7b4349" LastKnownName="Port1" />
+            <elementDefinition Id="78b07703-a0f0-4603-af85-b112c4a60b6f" />
+          </dependency>
+          <dependency Id="742df3a1-9b75-40c2-a0d9-edc4de97e812">
+            <providedInterfaceMoniker Id="a0080210-2f75-48ec-b6e5-21bb404cbba5" LastKnownName="Port1" />
+            <elementDefinition Id="c2c799b1-ff4d-4174-b7ac-e443adfb903a" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="184cbf5b-3f55-4b3f-9423-979338e86d09" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="8ac844c7-47b7-4c74-a034-ac8ee94b9598" />
+            <type_NamedElement>
+              <interfaceMoniker Id="3afadae8-8f7b-4af9-b158-7836b50c4e3b" LastKnownName="ITextMetricsConfiguration" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="3afadae8-8f7b-4af9-b158-7836b50c4e3b" name="ITextMetricsConfiguration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="de8251f1-b658-481f-95c3-f4732c9c0efd" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="74db9146-0b80-4975-aff8-cd4c1c52619b" name="TextMetrics.Model">
+    <elementDefinition Id="695e89fa-5543-4b8d-8a57-b6f3641111bb" />
+  </package>
+</componentModel>

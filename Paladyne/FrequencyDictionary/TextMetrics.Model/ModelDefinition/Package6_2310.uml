@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="adfdbed0-be18-4bb2-a1d1-051500e83848"
+  name="Concurrent"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="24aa82ad-c8ff-40e1-b6f8-6e185037f615"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Collections.Concurrent"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="9c9d076f-a154-42c7-bda5-6f50fd53863c"
+        name="ConcurrentDictionary&lt;String‎, Int64‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9757d547-fbff-49f9-9caf-7d396375e881"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2ed868c5-7067-4afc-a949-4b13edefcae4">
+                <propertyInstance
+                  Id="f905c7a9-60bb-478f-9c3e-61fce4d72b87"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77d0d643-7b18-4b4c-a227-48e97d458f82">
+                <propertyInstance
+                  Id="971a0366-d90d-4f02-a12c-9843d1a4f60e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e138378a-6f31-4fd1-8580-8fe30b389ec3">
+                <propertyInstance
+                  Id="95f0de47-4347-4e69-bf01-e348a31bb7f8"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e2dfa7e5-360c-47f1-82e0-7695cfd81b5f">
+                <propertyInstance
+                  Id="cdaf51fa-4017-478b-a40e-93c422a8661d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3147064e-319d-4b26-8b5a-4368c73469e8">
+                <propertyInstance
+                  Id="c3a8173c-37c1-4dd2-a954-9ffa6ab4ce1b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="8994e6d2-60f4-420a-94fc-81cfddbc7153">
+            <interfaceMoniker
+              Id="c740a1a8-62ad-4423-bcf7-6462779d477f"
+              LastKnownName="IEnumerable&lt;KeyValuePair‎&lt;String‎, Int64‎&gt;‎&gt;"
+              LastKnownLocation="Package5_2310.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="a21bd606-6aa1-4c99-b48a-66d27016d761">
+            <interfaceMoniker
+              Id="d4d9ad22-4cb5-42a6-8229-0e4978f8d202"
+              LastKnownName="IEnumerable&lt;KeyValuePair‎&lt;String‎, Int64‎&gt;‎&gt;"
+              LastKnownLocation="Package5_2310.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="71c000c2-7217-46cd-8230-8f119a4b72f9">
+            <interfaceMoniker
+              Id="2bf76283-b695-442a-b6f2-775601bcefb4"
+              LastKnownName="IEnumerable&lt;KeyValuePair‎&lt;String‎, Int64‎&gt;‎&gt;"
+              LastKnownLocation="Package5_2310.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <signatures>
+          <templateBinding
+            Id="c1e15656-be94-4613-9fc3-db791d915bec">
+            <redefinableTemplateSignatureMoniker
+              Id="da07452f-8138-47cd-ab0f-f551c7e40dea"
+              LastKnownLocation="Package6_2310.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="fee758b7-3c95-4590-bd6c-74aca546cc58">
+                  <actuals>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="TextMetrics.Model.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="2030908d-d2f1-4d23-abfd-ddee8ff72f4f"
+                      LastKnownLocation="Package6_2310.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="6a9d3c66-89da-4d80-a7e9-4d884c00f4e6">
+                  <actuals>
+                    <classMoniker
+                      Id="7b721d55-dffc-4cc4-b4f8-25f33f4beaa3"
+                      LastKnownName="Int64"
+                      LastKnownLocation="Package3_2310.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="be7c1c3b-4615-4e43-a949-88d5ac39be43"
+                      LastKnownLocation="Package6_2310.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ee8ef6ae-4da5-4249-9ac3-92654544a095"
+        name="ConcurrentDictionary"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e5795b50-8188-4347-9fbd-e1ac1b7b864d"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Concurrent Type%3D(Name%3DConcurrentDictionary GenericParameterCount%3D2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1ebd8ccb-346a-4635-9391-de2a54b4ff35"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="08f31349-15f6-47d0-8415-1dfc961d1a0b">
+                <propertyInstance
+                  Id="ae796cd6-0c6b-42a7-8124-b11edaf3c8e0"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a6d6da0d-8a1a-42c4-9e8e-b1ec8ee1727f">
+                <propertyInstance
+                  Id="4445f3ab-7613-4a1a-85cf-1b36b80e7c63"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eabeb015-373d-42f6-a73e-0147b8100d0a">
+                <propertyInstance
+                  Id="a4af0138-dd0d-4ea4-b585-d45fb3e3b07d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="41a61037-fd6f-45f9-a100-2694c16962ed">
+                <propertyInstance
+                  Id="823417cc-fa12-4c83-be8a-b32f6b0bd86d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11932c07-2b48-4d57-bd6e-9e47e1bd2ad6">
+                <propertyInstance
+                  Id="0448f583-bb6a-4dce-9e92-a88114e13917"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="da07452f-8138-47cd-ab0f-f551c7e40dea"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="2030908d-d2f1-4d23-abfd-ddee8ff72f4f">
+                <referencesInternal>
+                  <reference
+                    Id="33d9b82a-0157-4439-8bba-9acafdaf2418"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Concurrent Type%3D(Name%3DConcurrentDictionary GenericParameterCount%3D2) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="4acc98f0-9ee9-46a2-98d5-4b8e7a559194"
+                    name="TKey"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="be7c1c3b-4615-4e43-a949-88d5ac39be43">
+                <referencesInternal>
+                  <reference
+                    Id="871f5dd4-5b63-4ae6-b3ca-9c14ebce9bc6"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Concurrent Type%3D(Name%3DConcurrentDictionary GenericParameterCount%3D2) ParameterIdentifier%3D1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="55a19525-0582-4675-aabd-c4608f7332de"
+                    name="TValue"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

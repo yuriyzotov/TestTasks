@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextMetrics.Core", "TextMet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextMetrics.Core.Test", "TextMetrics.Core.Test\TextMetrics.Core.Test.csproj", "{C1848E88-7450-4FD0-AFF2-65496510411F}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "TextMetrics.Model", "TextMetrics.Model\TextMetrics.Model.modelproj", "{89D7F9E1-8BEC-42A8-A820-3754187E6205}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,8 +27,15 @@ Global
 		{C1848E88-7450-4FD0-AFF2-65496510411F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1848E88-7450-4FD0-AFF2-65496510411F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1848E88-7450-4FD0-AFF2-65496510411F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89D7F9E1-8BEC-42A8-A820-3754187E6205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89D7F9E1-8BEC-42A8-A820-3754187E6205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89D7F9E1-8BEC-42A8-A820-3754187E6205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89D7F9E1-8BEC-42A8-A820-3754187E6205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

@@ -33,15 +33,19 @@ namespace TextMetrics.Core.TextMetrics
             var parsingStrategy = myConfiguration.CreateTokenParserStrategy();
 
             //setup parsing-aggregation delegate
-            Action<string> tokenParsingAction = 
-                (line) =>  parsingStrategy.Parse(line).All(
-                    token => { aggregator.Aggregate(token); return true; }
-             );
+            Action<string> tokenParsingAction =
+                (line) =>
+                {
+                    foreach (var token in parsingStrategy.Parse(line))
+                    {
+                        aggregator.Aggregate(token);
+                    }
+                };
 
             //check if it is possible to use parallel computing
             if (useParallelComputing && aggregator.IsSynchronized)
             {
-                myConfiguration.CreateTextParser().Parse().AsParallel().ForAll(tokenParsingAction);
+                myConfiguration.CreateTextParser().Parse().AsParallel().WithExecutionMode(ParallelExecutionMode.ForceParallelism).ForAll(tokenParsingAction);
             }
             else
             {

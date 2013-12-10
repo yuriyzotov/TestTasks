@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="29781e03-86b5-4c45-ba73-c7c3accb3415"
+  name="TextMetrics"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a308727c-00d3-4553-91c3-8b915c00ab80"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTextMetrics.Core.TextMetrics"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="90948cae-7b3c-4483-b8a5-9fe39bb8b28b"
+        name="ITextMetricsConfiguration"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="14279453-a406-4f22-b5aa-93d3201108eb"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DITextMetricsConfiguration"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c3efcce2-9580-4f00-a71e-e33d5f4f8acf"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d6146630-d125-4c71-87d8-9a14fcdc8320">
+                <propertyInstance
+                  Id="ba8b56be-2277-4eae-916b-6179f136cd50"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e5fdb25d-25b7-4143-a05b-b577c8951566">
+                <propertyInstance
+                  Id="341c04f5-2e11-4553-9eb5-f8324330673f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="779e1094-cbca-4f76-83f3-f37b5c65d4e6">
+                <propertyInstance
+                  Id="687412f3-a12b-43a8-b5ca-0b93aac863d6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="318e0ef6-a87b-4a44-980d-d01a6d72c986">
+                <propertyInstance
+                  Id="eeca1024-9dfb-49f0-9005-ff5bede577e7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="e59bc6b9-bed7-4316-8ecf-7abc0ea13b44"
+            isDerived="false"
+            sourceEndRoleName="ITextMetricsConfiguration"
+            targetEndRoleName="IAggregeationStorage"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="dfc8b999-f3f2-458b-a416-53a6a67c31f6"
+              LastKnownName="IAggregeationStorage"
+              LastKnownLocation="Package_2311.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b594e4dd-441c-4a5f-9e4a-0e8603989211"
+                  name="ITextMetricsConfiguration"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fa8fb214-979f-4842-a4c9-0289fdb5772e"
+                  name="IAggregeationStorage"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1e6cd67e-6f2f-4e3f-95e2-5add98b2c627"
+            isDerived="false"
+            sourceEndRoleName="ITextMetricsConfiguration"
+            targetEndRoleName="ITokensAggregator"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="8c9c1a68-89cd-4932-8693-c99ded368783"
+              LastKnownName="ITokensAggregator"
+              LastKnownLocation="Package2_2310.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cd8fbc13-434a-445d-9108-35941e15b009"
+                  name="ITextMetricsConfiguration"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cbbf97e7-79c5-43d2-bd64-4a70f291da2d"
+                  name="ITokensAggregator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1a9316ef-42d6-49d8-a2bf-a9bacce916ca"
+            isDerived="false"
+            sourceEndRoleName="ITextMetricsConfiguration"
+            targetEndRoleName="ITokensParserStrategy"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="3be5831f-b347-4ede-bfc0-1c1c279e37f7"
+              LastKnownName="ITokensParserStrategy"
+              LastKnownLocation="Package_2314.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="976f46dc-5e9a-494f-ac16-a8cc92d2f2e0"
+                  name="ITextMetricsConfiguration"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c50e333f-7b1c-4192-a656-fc723c0d7d45"
+                  name="ITokensParserStrategy"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d53a3482-43ce-42e5-932f-e9a7508e5e52"
+            isDerived="false"
+            sourceEndRoleName="ITextMetricsConfiguration"
+            targetEndRoleName="ITextParser"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="18c0db0f-3310-46fb-adfa-91f665d6557d"
+              LastKnownName="ITextParser"
+              LastKnownLocation="Package_2314.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e08c9d22-01da-4354-83d8-8f381203707a"
+                  name="ITextMetricsConfiguration"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90d931cc-116e-4c2e-a2c8-01172b27ac5a"
+                  name="ITextParser"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperations>
+          <operation
+            Id="2775d745-8301-4dce-bc6b-c5642d8d273c"
+            name="CreateTextParser"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="843c218d-802f-4313-b08e-89a96567d3a0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DITextMetricsConfiguration Member%3DCreateTextParser"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d2d04888-aa54-4571-a94f-407234d75eb4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d4c8135f-5486-446f-b595-954531a9a1ce">
+                    <propertyInstance
+                      Id="420729af-d358-4a83-9716-73cf2c0636e8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13ee8302-d390-47c5-a05e-0c96b1797708">
+                    <propertyInstance
+                      Id="a0f2a756-51b0-4509-b3e1-2b6ba5fed693"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd060b31-9235-4160-9ee6-b8100ffba4a2">
+                    <propertyInstance
+                      Id="6b392ebb-3bd1-4ef4-8e41-04381d6ae8e7"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="906b0be1-f51a-494a-893a-15cb56a79719">
+                    <propertyInstance
+                      Id="aaa8cf37-2551-4510-8bb7-8d8ca69c447f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb9ee167-feb3-4fd3-9a56-9659efdb3b26">
+                    <propertyInstance
+                      Id="8d83b03d-effc-468f-aa5a-b9198ebcff82"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3db758f7-a897-46e6-a19b-c08c7010677e">
+                    <propertyInstance
+                      Id="c365afca-109a-446d-af41-c7d2bad25a79"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c22e4de-14a1-4da4-8a65-4f95feb0c23c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="18c0db0f-3310-46fb-adfa-91f665d6557d"
+                      LastKnownName="ITextParser"
+                      LastKnownLocation="Package_2314.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="749f1971-a2f1-4594-98a0-2685c89221f5"
+            name="CreateTokenParserStrategy"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="08fa2623-f424-4da1-9ab3-35c42378a8f7"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DITextMetricsConfiguration Member%3DCreateTokenParserStrategy"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="accfc12c-704a-4ae6-bca2-1e427790655d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4093897-a3c2-4328-a7a8-84f84619ab66">
+                    <propertyInstance
+                      Id="4f028416-8634-4e2d-a22d-562483ac5b99"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f1f793a-b4b7-4990-bc4d-918d245744a7">
+                    <propertyInstance
+                      Id="520b6526-60b0-4c29-a15f-e19a98b24f36"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a9fe9f0-b689-4ce5-80f4-641cef7c42c9">
+                    <propertyInstance
+                      Id="86d03dce-cf26-4368-918e-ffe7794f65a3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ef3cc50c-0c26-4ecd-8828-76f854f1d4ce">
+                    <propertyInstance
+                      Id="c9faa428-1c5e-4849-a72a-e7405df9efd5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a60fd425-e82f-4925-a909-cef395fdc61a">
+                    <propertyInstance
+                      Id="7bf21d54-add3-4b60-b23d-b835c4d233a6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7fb64e7-d9d4-473b-93bf-93fe4fbd104a">
+                    <propertyInstance
+                      Id="85add86c-99bf-44e9-ab34-98bae5537a53"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2a064e74-dca4-444d-a358-48d7de13c6ca"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="3be5831f-b347-4ede-bfc0-1c1c279e37f7"
+                      LastKnownName="ITokensParserStrategy"
+                      LastKnownLocation="Package_2314.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1994750d-910b-43e4-a82d-28061452e94c"
+            name="CreateTokenAggregator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="135f4377-ea77-471e-993e-8d3bc988e10f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DITextMetricsConfiguration Member%3DCreateTokenAggregator"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="95f1ee5a-2fea-47e6-9a63-2d15d26e9fe1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c8966c1e-8119-4824-a87a-cba25f5afc8a">
+                    <propertyInstance
+                      Id="dd510dad-9ec7-4745-96ef-99b7a71c9c5d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c86a6544-3f4f-435a-8705-ab3fdf64b109">
+                    <propertyInstance
+                      Id="79ee3eb9-7e59-4213-b725-dc2611bcb0fa"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f6db0ab-3442-4574-82c1-957d4c6c1005">
+                    <propertyInstance
+                      Id="fdb9e50d-bb2b-46e4-ad5d-9d203e9dd259"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="00dcd434-23ce-4163-b06b-df29e8a55456">
+                    <propertyInstance
+                      Id="87abd20a-c2da-4322-81d4-826ae42922ab"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca4ec132-a2de-4267-b8d3-07bd4902dd75">
+                    <propertyInstance
+                      Id="956dbd89-3aed-4746-9946-52cb09ba193b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a6af22a4-20e3-40e9-89a7-047764d8c17e">
+                    <propertyInstance
+                      Id="ce5b0a2f-7087-4003-9762-55e3b711a820"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5cf844af-4b4c-489c-9d80-e9bcf0ec508e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="63dbaf60-4e61-4a30-b160-05aa8dfb6810"
+                      LastKnownName="ITokensAggregator"
+                      LastKnownLocation="Package2_2310.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="02a87167-b942-419e-86b7-841373be66e0"
+            name="CreateAggregationStorage"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="95d2893a-fe20-4987-9664-c64b40fa49a8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DITextMetricsConfiguration Member%3DCreateAggregationStorage"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fae8c327-4c84-4590-926c-b971293a4ee7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a71566a5-a80e-4be4-a21f-d2ab89babab7">
+                    <propertyInstance
+                      Id="a230a860-22b1-43ec-9d2b-dd783febd06b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fda852d9-bc64-494a-8624-22cd360d5ed9">
+                    <propertyInstance
+                      Id="47ca9150-f0ca-4bed-9fd7-7e47e3a636d6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="13d42eb4-fa6e-41bd-8a25-38c8b2bbabb7">
+                    <propertyInstance
+                      Id="f603936d-f766-4411-908a-4dbbb6335205"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7cd43969-55d9-4df8-a714-cec7de794a12">
+                    <propertyInstance
+                      Id="290dccb2-2715-4e43-9914-182e291db59b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="691d713a-c8fe-4e1a-91ca-8d7fed4ba141">
+                    <propertyInstance
+                      Id="7ca2686a-f82f-4124-8890-470353ab6ff5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6b48c4db-97a6-4263-8c49-55edb206b322">
+                    <propertyInstance
+                      Id="5565d321-fea0-4b04-b535-f17150c27531"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="884fb981-8988-42d6-8e10-f6ee15b930b9"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="dfc8b999-f3f2-458b-a416-53a6a67c31f6"
+                      LastKnownName="IAggregeationStorage"
+                      LastKnownLocation="Package_2311.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b98f5726-d598-41bc-8010-8cb501c91bf7"
+        name="TextMetricsCalculator"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="7dfda130-2cd2-4ca6-94fc-de38bf81c4ce"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DTextMetricsCalculator"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b0b9e022-cd25-4a04-981a-0ac4e8341f94"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6544c58a-c386-4fac-99b9-54f2b104621c">
+                <propertyInstance
+                  Id="3d98de95-868c-45c2-8870-b1e9fda67a22"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6dc68ec8-bd1c-49b7-a6e3-a38500972323">
+                <propertyInstance
+                  Id="2b92d901-b0b6-4195-8656-8a6b53104980"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8e61cd26-2966-4403-9d11-02e98fda598d">
+                <propertyInstance
+                  Id="6d9da37d-34f0-4537-826f-2797d92c2f62"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="678dac82-3da4-43b2-981a-2ca9a9971120">
+                <propertyInstance
+                  Id="d16f6ca5-4811-46c7-a27f-46a3d6523c3d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fdba127d-2501-4ad8-b13a-dd14c18a49b7">
+                <propertyInstance
+                  Id="a5f7daf4-bb6c-45d9-aad4-20a51f2de98f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="473bacff-d0ec-465a-b9c9-da0ef52612aa"
+            isDerived="false"
+            sourceEndRoleName="TextMetricsCalculator"
+            targetEndRoleName="ITextMetricsConfiguration"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="90948cae-7b3c-4483-b8a5-9fe39bb8b28b"
+              LastKnownName="ITextMetricsConfiguration"
+              LastKnownLocation="Package_2315.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ef451235-0b86-4c31-90e8-dad3d1913d7b"
+                  name="TextMetricsCalculator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="59225047-1a21-4064-a030-12b42f86ce79"
+                  name="ITextMetricsConfiguration"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="47c4dc13-5190-423b-bf9e-045aa55538f7"
+            name="myConfiguration"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="79a78a89-ac31-4450-b681-e2a068c052aa"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DTextMetricsCalculator Member%3DmyConfiguration"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="407710a8-e072-4a63-9179-f3f173e10eeb"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="464dc786-709b-42c0-819e-dcc96ea82385">
+                    <propertyInstance
+                      Id="8babce80-cd70-4201-8033-b8135c1acd7a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="843a9e13-dc5a-42e5-a944-97e051399831">
+                    <propertyInstance
+                      Id="f44ecce1-35b6-47f8-a7a9-389c16e5a16f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ca74eb9-fb2c-4464-9804-a778f69863c3">
+                    <propertyInstance
+                      Id="a05943fa-250a-4439-a873-70d73ea49583"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="02638fe3-2458-45dc-b33a-0fcece7ff170">
+                    <propertyInstance
+                      Id="a1c1ca0e-22db-4190-8dbb-7ed0f0a62f5b"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45546997-e107-4865-b841-9af70dc5e9b8">
+                    <propertyInstance
+                      Id="93a1d771-5e80-47dd-ace6-d9cc478ecfb3"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="90948cae-7b3c-4483-b8a5-9fe39bb8b28b"
+                LastKnownName="ITextMetricsConfiguration"
+                LastKnownLocation="Package_2315.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="62b57991-37bb-472e-a2d0-3762bc67cac8"
+            name="TextMetricsCalculator"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4796a088-29ad-478f-962d-fc1f5aa6509c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DTextMetricsCalculator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DITextMetricsConfiguration)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="845fe7ca-e590-4657-b90f-e219cdace19f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61024a83-4ee5-43fa-9118-d269ab65f718">
+                    <propertyInstance
+                      Id="99dcfc38-395c-4e77-9dc4-1c9ed8a9a846"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="653bd738-61da-41e6-9899-7ba4beaccc1d">
+                    <propertyInstance
+                      Id="0aea7255-0f45-4760-afa3-207d62e36168"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a915222f-28cc-4bf5-8076-6a995075b80b">
+                    <propertyInstance
+                      Id="119de40b-5f83-4b86-96e5-3afe4f9b12c9"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8333e1e3-bbfb-477d-973b-a64a824616fb">
+                    <propertyInstance
+                      Id="179b8c9c-4171-4c0c-b0d8-ab3016f18ae5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="397ca388-032d-4e09-acf5-e8eead1a9440">
+                    <propertyInstance
+                      Id="00c37852-e9b5-41c7-bd9c-8ab96845c467"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e72ded60-b678-4aff-a3bf-76b8ec439416">
+                    <propertyInstance
+                      Id="20582dd5-7261-47b7-92aa-bcb04bda0547"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d5cdc46-e807-4505-b7e6-ee98e9b47e5c"
+                  name="configuration"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0d80fc8e-05e5-43a3-a47d-fbc87e00cf68"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DTextMetricsCalculator Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DITextMetricsConfiguration)]) ParameterIdentifier%3Dconfiguration"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="90948cae-7b3c-4483-b8a5-9fe39bb8b28b"
+                      LastKnownName="ITextMetricsConfiguration"
+                      LastKnownLocation="Package_2315.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ad749b5b-e16f-4cc7-8c82-b4a7f649f144"
+            name="Calculate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2aa905be-ea6e-49e0-94ee-4eeed5a64a50"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DTextMetricsCalculator Member%3D(Name%3DCalculate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="19f113ee-e943-4024-9048-0b7fd9a1df7e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="59ad52a8-1539-406e-8b55-1e2a91792956">
+                    <propertyInstance
+                      Id="0af45aa8-392c-4bf4-8a49-37dfed361719"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5cf560be-0815-4037-858c-3961e97f51b1">
+                    <propertyInstance
+                      Id="1a1c09f8-b642-42cc-8c69-0942f168a65d"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5b8424d6-0083-4f84-bd43-5880b38de015">
+                    <propertyInstance
+                      Id="2400ef29-83eb-4b01-886d-31f0c078a3df"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6743c99c-4796-4f51-9d96-27b5db615193">
+                    <propertyInstance
+                      Id="bdbc25ef-b85f-463d-aa99-1fc7df3da466"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f13d0083-7169-4568-a3ec-59bf4d510103">
+                    <propertyInstance
+                      Id="7dea54ac-c26e-49e2-bd5e-ef7a3a6c5ec7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3c206261-fb13-411f-8b23-a83f5e8d9294">
+                    <propertyInstance
+                      Id="c3f93ca0-c96c-4d84-a525-79f753a2c6a2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2560323a-7410-4fda-b777-2c9606941547"
+                  name="useParallelComputing"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="58d384ea-0d77-4440-a015-e9f0ad06309e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Fdigger%2FDocuments%2FGitHub%2FTestTasks%2FPaladyne%2FFrequencyDictionary%2FTextMetrics.Core%2Fbin%2FDebug%2FTextMetrics.Core.dll Namespace%3DTextMetrics.Core.TextMetrics Type%3DTextMetricsCalculator Member%3D(Name%3DCalculate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DBoolean)]) ParameterIdentifier%3DuseParallelComputing"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="TextMetrics.Model.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

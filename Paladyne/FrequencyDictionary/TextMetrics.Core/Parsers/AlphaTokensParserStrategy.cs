@@ -12,6 +12,8 @@ namespace TextMetrics.Core.Parsers
     /// </summary>
     public class AlphaTokensParserStrategy : ITokensParserStrategy
     {
+        
+        private char[] myTrimmedSymbols = "'-".ToArray();
         private Regex myWordsRegexp;
 
         public AlphaTokensParserStrategy(Encoding encoding)
@@ -29,9 +31,10 @@ namespace TextMetrics.Core.Parsers
         {
             if(string.IsNullOrWhiteSpace(line))
                 return Enumerable.Empty<string>();
+
             //parse sentence by regular expression
             var wordCollection = myWordsRegexp.Matches(line);
-            return wordCollection.Cast<Match>().Select(s => s.ToString().Trim("'-".ToArray())).Where(s=>!string.IsNullOrWhiteSpace(s));
+            return wordCollection.Cast<Match>().Select(s => s.ToString().Trim(myTrimmedSymbols)).Where(s=>!string.IsNullOrWhiteSpace(s));
         }
     }
 }

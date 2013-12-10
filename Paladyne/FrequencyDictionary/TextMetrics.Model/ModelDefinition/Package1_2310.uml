@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="6b1248d2-6118-4aa2-bf5f-19dfe494ac19"
+  name="Core"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="dcaa9ef9-10a5-48da-b1a3-175e9432f8b9"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTextMetrics.Core"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="826aec0c-9aa9-4c71-8eab-0101eefa67ee"
+        LastKnownName="Aggregators"
+        LastKnownLocation="Package2_2310.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b3d64efd-ce41-4699-b6dc-1b659720989e"
+        LastKnownName="Parsers"
+        LastKnownLocation="Package_2314.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="29781e03-86b5-4c45-ba73-c7c3accb3415"
+        LastKnownName="TextMetrics"
+        LastKnownLocation="Package_2315.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

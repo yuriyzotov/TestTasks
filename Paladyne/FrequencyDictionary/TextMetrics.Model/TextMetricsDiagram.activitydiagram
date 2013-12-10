@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="974c4b30-6b70-47a7-9870-0c181b0c25f5" name="Activity1" linkedPackageId="0a653870-ffa6-44cb-a5a4-86e1f513a60f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="e7917b5b-74b3-48a4-b281-40c34b04635d">
+      <profileInstance Id="59e4120a-ac61-42a2-bc19-71111c4e4bf3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f285e91a-ff42-4c0a-874d-5a07a042c9e5">
+      <profileInstance Id="8a768872-73aa-4395-abf0-f538e76130e0" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0a34b519-c8ea-4b29-9df0-e6aa94d993f8">
+      <profileInstance Id="8094752c-510a-4b82-b7f0-23834d8a5c29" name="CSharpProfile">
+        <elementDefinition Id="32a70398-cc83-4a1b-be3c-8ad1b571eb74" />
+      </profileInstance>
+      <elementDefinition Id="78a16829-96ae-4618-a9c6-b06bef502d8c" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="f86102ca-78f6-4c4e-9a6e-ab34001f68b3" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="c518f8c8-615f-41a1-89a6-ff09f1f4a96a" />
+        <nodes>
+          <initialNode Id="085ef33b-f1ce-4bb1-a070-bb25ce4cd327" name="Initial1" isLeaf="false">
+            <elementDefinition Id="51ef3f7e-ebee-4037-afbb-15d37628cb01" />
+            <objectFlowTargets>
+              <objectFlow Id="89b370dc-4791-4d8b-95f4-8adbfed5cc44" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <objectNodeMoniker Id="044c5fa2-e67a-4f8e-8b35-fdf47f992587" LastKnownName="Input text file" />
+                <elementDefinition Id="995f272e-3773-43c3-9527-74bbba18a509" />
+              </objectFlow>
+            </objectFlowTargets>
+          </initialNode>
+          <objectNode Id="044c5fa2-e67a-4f8e-8b35-fdf47f992587" name="Input text file" isLeaf="false" ordering="Unordered" isControlType="false">
+            <elementDefinition Id="c62b1bd2-e475-453b-a54f-057611c4cc61" />
+            <objectFlowTargets>
+              <objectFlow Id="39a60a7a-e4f2-433c-a4b0-5c044bd9f28d" isLeaf="false" isMulticast="false" isMultireceive="false">
+                <opaqueActionMoniker Id="f26f6f34-6021-4ef5-9755-60a431b6523b" LastKnownName="Start application and get the file as argument" />
+                <elementDefinition Id="70381463-d45f-4b39-9eea-15e36d6017fa" />
+              </objectFlow>
+            </objectFlowTargets>
+            <upperBound>
+              <literalInteger Id="f051151d-c849-4d94-8b59-f3c795da6d81" name="2147483647" value="2147483647">
+                <elementDefinition Id="9fb9a0c9-6447-4284-ac8e-41ba7677ff22" />
+              </literalInteger>
+            </upperBound>
+          </objectNode>
+          <opaqueAction Id="f26f6f34-6021-4ef5-9755-60a431b6523b" name="Start application and get the file as argument" isLeaf="false">
+            <elementDefinition Id="374a9d4b-47cc-4ceb-9c9a-b9c2e4051b0a" />
+            <flowNodeTargets>
+              <controlFlow Id="dd089097-0cd3-4f2a-9994-14dadce9dac0" isLeaf="false">
+                <opaqueActionMoniker Id="738b0b3c-44a7-4fb1-ba43-a70cfe036422" LastKnownName="Create configuration and TextMetricsCalculator" />
+                <elementDefinition Id="34d3e910-233f-4a4f-8690-949f1b78e1a9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="738b0b3c-44a7-4fb1-ba43-a70cfe036422" name="Create configuration and TextMetricsCalculator" isLeaf="false">
+            <elementDefinition Id="577de3b0-18f5-4113-b323-fa641fad6f55" />
+            <flowNodeTargets>
+              <controlFlow Id="1eb5ca40-eb06-44a1-8972-658024385b4f" isLeaf="false">
+                <opaqueActionMoniker Id="a604fc46-a438-4d6f-98b4-b9b8c33df1b8" LastKnownName="Create text parser and parse input file by lines" />
+                <elementDefinition Id="eda055d0-e788-4e06-8291-c3dea03471ec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a604fc46-a438-4d6f-98b4-b9b8c33df1b8" name="Create text parser and parse input file by lines" isLeaf="false">
+            <elementDefinition Id="dae2ca53-532f-4431-b4dd-c91ded1f4f41" />
+            <flowNodeTargets>
+              <controlFlow Id="3cced1e6-8fed-46df-9f5c-aa4254f9aa41" isLeaf="false">
+                <forkNodeMoniker Id="32038334-fcab-4d08-b3cf-766f1b5259de" LastKnownName="Fork1" />
+                <elementDefinition Id="da313a05-66cf-42f6-bb11-da3cb1919dba" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="32038334-fcab-4d08-b3cf-766f1b5259de" name="Fork1" isLeaf="false">
+            <description>Process lines in parallel</description>
+            <elementDefinition Id="38cdecd8-03fd-4e33-a9bc-a5a2c43fe1a4" />
+            <flowNodeTargets>
+              <controlFlow Id="df7453ba-c512-456c-9b4b-34b0fe9cc316" isLeaf="false">
+                <opaqueActionMoniker Id="b0da7399-71e7-46b8-98f7-199fb0950fe8" LastKnownName="Parse first line by tokens (words)" />
+                <elementDefinition Id="6eb2419a-5899-41ca-9ca0-5d8c4d16294e" />
+              </controlFlow>
+              <controlFlow Id="96ca2968-66b0-4368-a7c1-02e65a33914e" isLeaf="false">
+                <opaqueActionMoniker Id="16edb264-a353-4394-84f7-017d2e311a60" LastKnownName="Parse second line by tokens (words)" />
+                <elementDefinition Id="b6ab8d69-9c2a-47a6-aacc-89eb397f7391" />
+              </controlFlow>
+              <controlFlow Id="b022bf3c-ff43-48fc-a636-8addee746d95" isLeaf="false">
+                <opaqueActionMoniker Id="ac03c49b-cdc6-4547-8f3d-d7744e21eaa9" LastKnownName="Parse Nth line by tokens (words)" />
+                <elementDefinition Id="b33544a4-ef14-4c9a-89e8-22be4ef1aece" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="b0da7399-71e7-46b8-98f7-199fb0950fe8" name="Parse first line by tokens (words)" isLeaf="false">
+            <elementDefinition Id="2a568074-8e1a-4c66-a6be-2bbaf361a8e5" />
+            <flowNodeTargets>
+              <controlFlow Id="f034096f-ca70-4e36-a906-35790b93e9ad" isLeaf="false">
+                <joinNodeMoniker Id="84f1333f-7024-4ac8-b1ed-4d4932f191a7" LastKnownName="Join1" />
+                <elementDefinition Id="3eddc986-452f-4546-9e2e-740244af87e6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="16edb264-a353-4394-84f7-017d2e311a60" name="Parse second line by tokens (words)" isLeaf="false">
+            <elementDefinition Id="042e8f1e-91a0-48ab-9b37-a7cdc804635d" />
+            <flowNodeTargets>
+              <controlFlow Id="bc439844-e9d0-42cb-8fb9-fca944d9cfdf" isLeaf="false">
+                <joinNodeMoniker Id="84f1333f-7024-4ac8-b1ed-4d4932f191a7" LastKnownName="Join1" />
+                <elementDefinition Id="d05f7605-75bf-47e4-8523-314a332dd314" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ac03c49b-cdc6-4547-8f3d-d7744e21eaa9" name="Parse Nth line by tokens (words)" isLeaf="false">
+            <elementDefinition Id="31a01d4b-9210-447c-b1d1-3c8e2c41f87c" />
+            <flowNodeTargets>
+              <controlFlow Id="a4ea2e57-31f6-4928-8bb8-4843231789b8" isLeaf="false">
+                <joinNodeMoniker Id="84f1333f-7024-4ac8-b1ed-4d4932f191a7" LastKnownName="Join1" />
+                <elementDefinition Id="03ee625d-7fe5-4e16-bd4e-d0092212847c" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode Id="84f1333f-7024-4ac8-b1ed-4d4932f191a7" name="Join1" isLeaf="false">
+            <elementDefinition Id="c7ad524e-b11b-4565-b5d8-6e9327709cfe" />
+            <flowNodeTargets>
+              <controlFlow Id="645b8d94-9bfe-471f-a162-383e945209e3" isLeaf="false">
+                <opaqueActionMoniker Id="5012d22f-feb5-421b-ab1a-8dce05d1208b" LastKnownName="Aggregate tokens in aggregator (calculate words frequency)" />
+                <elementDefinition Id="41135ea1-c3c2-4813-a5e4-a5babef8adc9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <opaqueAction Id="5012d22f-feb5-421b-ab1a-8dce05d1208b" name="Aggregate tokens in aggregator (calculate words frequency)" isLeaf="false">
+            <elementDefinition Id="91eba552-51b3-4fba-a1c7-d8807db09684" />
+            <flowNodeTargets>
+              <controlFlow Id="9409db1f-af81-4924-9ffd-fec68edd2ff0" isLeaf="false">
+                <opaqueActionMoniker Id="a1bbcb7d-d3a0-4bb3-80bd-2da836912d26" LastKnownName="Save aggregations into the text file" />
+                <elementDefinition Id="28abd80f-e71f-4dbb-92b5-8653e759a8da" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a1bbcb7d-d3a0-4bb3-80bd-2da836912d26" name="Save aggregations into the text file" isLeaf="false">
+            <elementDefinition Id="e2d919ef-11fa-41d0-8ca3-8701bf0054f0" />
+            <flowNodeTargets>
+              <controlFlow Id="38fb7c3d-0e6e-44d7-8cb0-ed7f0391b14f" isLeaf="false">
+                <activityFinalNodeMoniker Id="a336ac82-c50f-4b09-ad59-935db40f5664" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="239c8fad-338d-407a-9a12-93efd153fa74" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="a336ac82-c50f-4b09-ad59-935db40f5664" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="4b167878-b3ad-4751-822f-8542c9892103" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="0a653870-ffa6-44cb-a5a4-86e1f513a60f" name="TextMetrics.Model">
+    <elementDefinition Id="695e89fa-5543-4b8d-8a57-b6f3641111bb" />
+  </package>
+</activityRootModel>

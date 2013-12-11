@@ -23,19 +23,27 @@ namespace TextMetrics.Core.TextMetrics
             myConfiguration = configuration;
         }
         
+        
         /// <summary>
         /// calculate metrics
         /// </summary>
         /// <param name="useParallelComputing"></param>
         public void Calculate(bool useParallelComputing)
         {
+            Trace("Calculation running.");
             var aggregator = myConfiguration.CreateTokenAggregator();
             var parsingStrategy = myConfiguration.CreateTokenParserStrategy();
+            int lineNo = 0;
 
             //setup parsing-aggregation delegate
             Action<string> tokenParsingAction =
                 (line) =>
                 {
+                    //simple reporting, later can be used log4net
+                    lineNo++;
+                    if (lineNo % 1000 == 0)
+                        Trace(".");
+                    //parse line and execute aggreagtion
                     foreach (var token in parsingStrategy.Parse(line))
                     {
                         aggregator.Aggregate(token);
@@ -56,6 +64,15 @@ namespace TextMetrics.Core.TextMetrics
             }
             //save results
             myConfiguration.CreateAggregationStorage().SaveAggregation(aggregator);
+        }
+
+        /// <summary>
+        /// simple logging, in future can be used log4net
+        /// </summary>
+        /// <param name="message"></param>
+        private void Trace(string message)
+        {
+            Console.Out.Write(message);
         }
     }
 }

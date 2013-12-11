@@ -45,7 +45,7 @@ namespace TextMetrics.Core.Parsers
 
 
         /// <summary>
-        /// internal method to verify is file is text and in valid encoding
+        /// internal method to verify if file is text and in valid encoding
         /// </summary>
         private void VerifyFile()
         {

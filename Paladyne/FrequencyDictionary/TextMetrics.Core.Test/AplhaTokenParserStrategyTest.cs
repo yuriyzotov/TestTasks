@@ -25,7 +25,7 @@ namespace TextMetrics.Core.Test
                 "Он", "очень", "умный", "человек", "но", "со","странностями","и", "тяжелый","La","pauvre","petite","est","malheureuse","comme","les", "pierres"
                 
             };
-            var strategy = new AlphaTokensParserStrategy(Encoding.GetEncoding(1251));
+            var strategy = new AlphaTokensParserStrategy();
             var output = strategy.Parse(inputText);
             CollectionAssert.AreEquivalent(expected,output.ToList());
         }
@@ -36,7 +36,7 @@ namespace TextMetrics.Core.Test
         {
             var inputText = "- ' 123 -3-3   ";
             var expected = new List<string>();
-            var strategy = new AlphaTokensParserStrategy(Encoding.GetEncoding(1251));
+            var strategy = new AlphaTokensParserStrategy();
             var output = strategy.Parse(inputText);
             CollectionAssert.AreEquivalent(expected, output.ToList());
         }
@@ -45,7 +45,7 @@ namespace TextMetrics.Core.Test
         {
             var inputText = "";
             var expected = new List<string>();
-            var strategy = new AlphaTokensParserStrategy(Encoding.GetEncoding(1251));
+            var strategy = new AlphaTokensParserStrategy();
             var output = strategy.Parse(inputText);
             CollectionAssert.AreEquivalent(expected, output.ToList());
         }
@@ -55,7 +55,7 @@ namespace TextMetrics.Core.Test
         {
             string inputText = null;
             var expected = new List<string>();
-            var strategy = new AlphaTokensParserStrategy(Encoding.GetEncoding(1251));
+            var strategy = new AlphaTokensParserStrategy();
             var output = strategy.Parse(inputText);
             CollectionAssert.AreEquivalent(expected, output.ToList());
         }

@@ -16,7 +16,7 @@ namespace TextMetrics.Core.Parsers
         private char[] myTrimmedSymbols = "'-".ToArray();
         private Regex myWordsRegexp;
 
-        public AlphaTokensParserStrategy(Encoding encoding)
+        public AlphaTokensParserStrategy()
         {
             //setup parsing expression
             myWordsRegexp = new Regex(@"[\p{Ll}\p{Lu}\p{Lo}\p{Lm}\p{Lt}'-]+", RegexOptions.Compiled | RegexOptions.Singleline);

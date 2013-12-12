@@ -64,7 +64,7 @@ namespace TextMetrics.Core.Test
 
             public Parsers.ITokensParserStrategy CreateTokenParserStrategy()
             {
-                return new AlphaTokensParserStrategy(myEncoding);
+                return new AlphaTokensParserStrategy();
             }
 
             public Aggregators.ITokensAggregator CreateTokenAggregator()

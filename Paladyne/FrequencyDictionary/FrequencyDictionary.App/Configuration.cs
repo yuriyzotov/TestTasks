@@ -56,7 +56,7 @@ namespace FrequencyDictionary.App
 
         public ITokensParserStrategy CreateTokenParserStrategy()
         {
-            return new AlphaTokensParserStrategy(myEncoding);
+            return new AlphaTokensParserStrategy();
         }
 
         public ITokensAggregator CreateTokenAggregator()

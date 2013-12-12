@@ -17,8 +17,11 @@ namespace TextMetrics.Core.Aggregators.Storage
 
         public TextFileAggregationStorage(string filename, Encoding encoding)
         {
+            if (string.IsNullOrEmpty(filename))
+                throw new ArgumentNullException("Output file");
+
             myOutputFile = filename;
-            myEncoding = encoding;
+            this.myEncoding = encoding ?? Encoding.GetEncoding(1251);
         }
 
         public void SaveAggregation(ITokensAggregator aggregator)

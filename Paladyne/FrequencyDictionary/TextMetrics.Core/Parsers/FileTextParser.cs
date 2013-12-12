@@ -17,6 +17,9 @@ namespace TextMetrics.Core.Parsers
 
         public FileTextParser(string filename,Encoding encoding)
         {
+            if(string.IsNullOrEmpty(filename))
+                throw new ArgumentNullException("Input file");
+
             this.myInputFile = filename;
             this.myEncoding = encoding ?? Encoding.GetEncoding(1251);
             

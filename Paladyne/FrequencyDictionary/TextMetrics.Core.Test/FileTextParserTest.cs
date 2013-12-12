@@ -11,7 +11,7 @@ namespace TextMetrics.Core.Test
     [TestClass]
     public class FileTextParserTest
     {
-        private string[] myFilePathes = new string[4];
+        
         private List<string> myText = new List<string>() {
             "Отец очень богат и скуп. Он живет в деревне. Знаете, этот известный князь Болконский,",
             "отставленный еще при покойном императоре и прозванный прусским королем. Он очень умный человек,",
@@ -23,96 +23,156 @@ namespace TextMetrics.Core.Test
         public void Init()
         {
          
-            //create temporary files
-            myFilePathes[0] = Path.GetTempFileName();
-            myFilePathes[1] = Path.GetTempFileName();
-            myFilePathes[2] = Path.GetTempFileName();
-            myFilePathes[3] = Path.GetTempFileName();
-            using(var sw = new StreamWriter(myFilePathes[0],false,Encoding.UTF32))
-            {
-                foreach (var s in myText)
-                {
-                    sw.WriteLine(s);
-                }
-            }
-            using (var sw = new StreamWriter(myFilePathes[1], false, Encoding.UTF8))
-            {
-                foreach (var s in myText)
-                {
-                    sw.WriteLine(s);
-                }
-            }
-            using (var sw = new StreamWriter(myFilePathes[2], false, Encoding.GetEncoding(1251)))
-            {
-                foreach (var s in myText)
-                {
-                    sw.WriteLine(s);
-                }
-            }
-            using (var sw = new FileStream(myFilePathes[3],FileMode.OpenOrCreate))
-            {
-                var rnd = new Random();
-                var data = new byte [1024];
-                rnd.NextBytes(data);
-                sw.Write(data,0,data.Length);
-            }
+          
+          
 
         }
 
-        [TestMethod]
-        public void TestFileParserEncoding()
+        //used to prepare temp file
+        private string CreateTestFileWithEncoding(Encoding encoding)
         {
-            //test load dufferent file types
+            var filePath = Path.GetTempFileName();
+            //prepare file
+            using (var sw = new StreamWriter(filePath, false, encoding))
+            {
+                foreach (var s in myText)
+                {
+                    sw.WriteLine(s);
+                }
+            }
+            return filePath;
+        }
 
+        [TestMethod]
+        public void TestFileParserWithInvalidEncoding()
+        {
             ITextParser parser;
+            //create temporary files
+            var filePath = CreateTestFileWithEncoding(Encoding.UTF32);
+            //load file
             try
             {
-                parser = new FileTextParser(myFilePathes[0], Encoding.GetEncoding(1251));
+                parser = new FileTextParser(filePath, Encoding.GetEncoding(1251));
                 var outputNon = parser.Parse();
                 Assert.Fail("Invalid encoding detection");
             }
             catch (ApplicationException)
-            { }
+            {
+                //all ok we are supposed to have this exception
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
+        }
 
-            parser = new FileTextParser(myFilePathes[1], Encoding.GetEncoding(1251));
-            var output = parser.Parse();
-            CollectionAssert.AreEquivalent(myText,output.ToList());
-
-            parser = new FileTextParser(myFilePathes[2], Encoding.GetEncoding(1251));
-            output = parser.Parse();
-            CollectionAssert.AreEquivalent(myText, output.ToList());
-
-            
+        [TestMethod]
+        public void TestFileParserWithValidUTF8Encoding()
+        {
+            ITextParser parser;
+            //create temporary files
+            var filePath = CreateTestFileWithEncoding(Encoding.UTF8);
+            //load file
             try
             {
-                parser = new FileTextParser(myFilePathes[3], Encoding.GetEncoding(1251));
+                parser = new FileTextParser(filePath, Encoding.GetEncoding(1251));
+                var output = parser.Parse();
+                CollectionAssert.AreEquivalent(myText, output.ToList());
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
+        }
+
+        [TestMethod]
+        public void TestFileParserWithValidCyrillicEncoding()
+        {
+            ITextParser parser;
+            //create temporary files
+            var filePath = CreateTestFileWithEncoding(Encoding.GetEncoding(1251));
+            //load file
+            try
+            {
+                parser = new FileTextParser(filePath, Encoding.GetEncoding(1251));
+                var output = parser.Parse();
+                CollectionAssert.AreEquivalent(myText, output.ToList());
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
+        }
+
+     
+        [TestMethod]
+        public void TestFileParserWithBinaryFileEncoding()
+        {
+            ITextParser parser;
+            //create temporary files
+            var filePath = Path.GetTempFileName();
+            //prepare file
+            using (var sw = new FileStream(filePath, FileMode.OpenOrCreate))
+            {
+                var rnd = new Random();
+                var data = new byte[1024];
+                rnd.NextBytes(data);
+                sw.Write(data, 0, data.Length);
+            }
+            //load file
+            try
+            {
+                parser = new FileTextParser(filePath, Encoding.GetEncoding(1251));
                 var outputNon = parser.Parse();
                 Assert.Fail("Try to open binary file");
             }
             catch (ApplicationException)
-            { }
-
+            {
+                //all ok we are supposed to have this exception
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
         }
-
-
+        
         [TestMethod]
-        public void TestEmptyFileParserEncoding()
+        public void TestEmptyFileParser()
         {
             var parser = new FileTextParser(Path.GetTempFileName(),Encoding.GetEncoding(1251));
             var output = parser.Parse();
             Assert.AreEqual(0, output.Count());
         }
         [TestMethod]
+        public void TestFileParserWithNullEncoding()
+        {
+            ITextParser parser;
+            //create temporary files
+            var filePath = CreateTestFileWithEncoding(Encoding.GetEncoding(1251));
+            //load file
+            try
+            {
+                parser = new FileTextParser(filePath, null);
+                var output = parser.Parse();
+                CollectionAssert.AreEquivalent(myText, output.ToList());
+            }
+            finally
+            {
+                File.Delete(filePath);
+            }
+        }
+
+        [TestMethod]
         public void TestNonExistingFile()
         {
             try
             {
                 var parser = new FileTextParser(Guid.NewGuid().ToString(), Encoding.GetEncoding(1251));
-                Assert.Fail("Try to use not exist file.");
+                Assert.Fail("Try to use file which not exist.");
             }
             catch (FileNotFoundException)
             {
-
+                //all ok we are supposed to have this exception
             }
         }
     }

@@ -18,7 +18,7 @@ namespace TextMetrics.Core.Parsers
         public FileTextParser(string filename,Encoding encoding)
         {
             this.myInputFile = filename;
-            this.myEncoding = encoding;
+            this.myEncoding = encoding ?? Encoding.GetEncoding(1251);
             
             if (!File.Exists(myInputFile))
                 throw new System.IO.FileNotFoundException("Input file not found", myInputFile);

@@ -46,9 +46,6 @@ namespace TextMetrics.Core.Test
         }
 
 
-
-
-
         private class ConfigurationMock : ITextMetricsConfiguration
         {
             private string myInPath;
@@ -83,7 +80,7 @@ namespace TextMetrics.Core.Test
         }
 
 
-        private string myLetters = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя-'";
+        private string myLetters = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя-";
 
 
         private string GenerateWord()

@@ -1,0 +1,1 @@
+..\binaries\FrequencyDictionary.App.exe bible.txt bible.out.txt 

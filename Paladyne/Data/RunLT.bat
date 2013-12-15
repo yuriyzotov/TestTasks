@@ -1,0 +1,1 @@
+..\binaries\FrequencyDictionary.App.exe lt1.txt lt1.out.txt 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Ninject.Modules;
 using TradingServer.Interfaces;
+using TradingServer.Server;
 
 namespace TradingServer.DI
 {
@@ -16,6 +17,8 @@ namespace TradingServer.DI
             this.Bind<IQuotesModel>().To<QuotesTable>().InSingletonScope();
             this.Bind<IQuotesSource>().To<QuotesSource>().InSingletonScope();
             this.Bind<ITradingServerShell>().To<TradingServerShell>().InSingletonScope();
+            this.Bind<IClientSynchronisation>().To<ClientSynchronisation>().InSingletonScope();
+            this.Bind<IClentListener>().To<ClentListener>();
         }
     }
 }

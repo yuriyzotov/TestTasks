@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ninject;
+using TradingServer.Configuration;
 using TradingServer.DI;
 using TradingServer.Interfaces;
 
@@ -15,6 +16,11 @@ namespace TradingServer
         {
             //init DI
             IKernel ninject = new StandardKernel(new TradingServerDIModule());
+            var config = new ServerConfiguration(args);
+            ninject.Bind<IServerConfiguration>().ToConstant(config);
+            
+
+            //run server
             var shell = ninject.Get<ITradingServerShell>();
             shell.Run();
             Console.WriteLine("Listening....Press Enter to Stop.");

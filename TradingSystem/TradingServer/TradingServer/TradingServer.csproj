@@ -44,28 +44,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\IServerConfiguration.cs" />
+    <Compile Include="Configuration\ServerConfiguration.cs" />
     <Compile Include="Data\TickerConstant.cs" />
     <Compile Include="DI\TradingServerDIModule.cs" />
-    <Compile Include="Interfaces\IQuotesFormatter.cs" />
-    <Compile Include="Interfaces\IQuotesModel.cs" />
-    <Compile Include="Interfaces\IQuotesSource.cs" />
+    <Compile Include="Formatters\IQuotesFormatter.cs" />
+    <Compile Include="Model\IQuotesModel.cs" />
     <Compile Include="Data\Quote.cs" />
-    <Compile Include="Interfaces\IQuoteValidator.cs" />
-    <Compile Include="IQuotesSource.cs" />
-    <Compile Include="Interfaces\ITradingServerShell.cs" />
-    <Compile Include="QuotesRowFormatter.cs" />
-    <Compile Include="QuotesColumnFormatter.cs" />
-    <Compile Include="QuotesSource.cs" />
-    <Compile Include="QuotesTable.cs" />
-    <Compile Include="QuoteValidator.cs" />
+    <Compile Include="Formatters\IQuoteValidator.cs" />
+    <Compile Include="Generator\IQuotesSource.cs" />
+    <Compile Include="Server\ClentListener.cs" />
+    <Compile Include="Server\ClientSynchronisation.cs" />
+    <Compile Include="Server\IClentListener.cs" />
+    <Compile Include="Server\IClientSynchronisation.cs" />
+    <Compile Include="Server\ITradingServerShell.cs" />
+    <Compile Include="Formatters\QuotesRowFormatter.cs" />
+    <Compile Include="Formatters\QuotesColumnFormatter.cs" />
+    <Compile Include="Generator\QuotesSource.cs" />
+    <Compile Include="Model\QuotesTable.cs" />
+    <Compile Include="Formatters\QuoteValidator.cs" />
     <Compile Include="ServerBootstrap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TradingServerShell.cs" />
+    <Compile Include="Server\TradingServerShell.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using TradingServer.Data;
 
-namespace TradingServer.Interfaces
+namespace TradingServer.Model
 {
     public interface IQuotesModel
     {

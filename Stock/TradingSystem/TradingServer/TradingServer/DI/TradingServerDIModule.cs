@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ninject.Modules;
-using TradingServer.Interfaces;
+using TradingServer.Formatters;
+
+using TradingServer.Model;
 using TradingServer.Server;
 
 namespace TradingServer.DI

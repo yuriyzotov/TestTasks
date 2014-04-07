@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TradingServer.Data;
-using TradingServer.Interfaces;
+using TradingServer.Formatters;
 
-namespace TradingServer
+namespace TradingServer.Model
 {
     public class QuotesTable: IQuotesModel
     {

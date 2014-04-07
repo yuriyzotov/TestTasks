@@ -1,7 +1,7 @@
 ﻿using System;
-namespace TradingServer.Interfaces
+namespace TradingServer.Server
 {
-    interface ITradingServerShell
+    public interface ITradingServerShell
     {
         void Run();
         void Stop();

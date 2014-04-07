@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TradingServer.Data;
 
-namespace TradingServer.Interfaces
+namespace TradingServer.Formatters
 {
     public interface IQuotesFormatter
     {

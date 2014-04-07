@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TradingServer.Data;
-using TradingServer.Interfaces;
 
-namespace TradingServer
+
+namespace TradingServer.Formatters
 {
     public class QuoteValidator : IQuoteValidator
  

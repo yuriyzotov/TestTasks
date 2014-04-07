@@ -5,7 +5,8 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
-using TradingServer.Interfaces;
+using TradingServer.Formatters;
+using TradingServer.Model;
 
 namespace TradingServer.Server
 {
@@ -65,8 +66,6 @@ namespace TradingServer.Server
 
             while (true)
             {
-
-                int timeout = 2000;
                 if (await Task.WhenAny(readerTask, this.mySync.PushNotification) == readerTask)
                 {
                     // task completed within timeout
@@ -75,10 +74,12 @@ namespace TradingServer.Server
 
                     if (dataFromServer == "r")
                     {
+                        //change fromat to row
                         formatter = new QuotesRowFormatter();
                     }
                     else if (dataFromServer == "c")
                     {
+                        //change fromat to column
                         formatter = new QuotesColumnFormatter();
                     }
                     else if (dataFromServer == "q")

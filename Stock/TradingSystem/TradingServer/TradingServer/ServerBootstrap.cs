@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using Ninject;
 using TradingServer.Configuration;
 using TradingServer.DI;
-using TradingServer.Interfaces;
+using TradingServer.Server;
+
 
 namespace TradingServer
 {

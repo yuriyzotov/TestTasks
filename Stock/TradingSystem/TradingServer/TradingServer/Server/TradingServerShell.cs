@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using TradingServer.Configuration;
-using TradingServer.Interfaces;
+using TradingServer.Model;
 using TradingServer.Server;
 
 namespace TradingServer

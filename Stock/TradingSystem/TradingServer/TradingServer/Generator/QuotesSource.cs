@@ -6,7 +6,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TradingServer.Data;
-using TradingServer.Interfaces;
+using TradingServer.Model;
+
 
 namespace TradingServer
 {

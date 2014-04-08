@@ -48,11 +48,11 @@ namespace TradingServer
             var r = new Random();
             while (!myStoping)
             {
-                Thread.Sleep(timeout);
                 decimal value = decimal.Round(new decimal(r.NextDouble()) * 5.0m, 2, MidpointRounding.AwayFromZero);
                 var tickerName = tickers.ElementAt(r.Next(tickers.Count));
 
                 myModel.UpdateQuote(new Quote(tickerName, value,DateTime.Now));
+                Thread.Sleep(timeout);
             }
         }
 

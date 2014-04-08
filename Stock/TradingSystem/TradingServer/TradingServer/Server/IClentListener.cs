@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Threading.Tasks;
 namespace TradingServer.Server
 {
     public interface IClentListener
     {
-        void HandleConnectionAsync(System.Net.Sockets.TcpClient tcpClient);
+        Task HandleConnectionAsync(System.Net.Sockets.TcpClient tcpClient);
     }
 }

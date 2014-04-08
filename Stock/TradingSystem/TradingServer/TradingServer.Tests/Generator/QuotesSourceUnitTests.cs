@@ -15,22 +15,24 @@ namespace TradingServer.Tests.Generator
         public void QuotesSource_Should_Push_New_Ticker_Every_500_ms()
         {
             var mockModel = new Moq.Mock<IQuotesModel>();
-            var tick = Environment.TickCount;
+            var tick = 0;
             var errors = 0;
             mockModel.Setup(m => m.UpdateQuote(It.IsAny<Quote>())).Callback(() =>
                 {
-                    var elapsed = Environment.TickCount - tick;
-                    if (elapsed < 450)
-                        Interlocked.Increment(ref errors);
-                    if (elapsed > 550)
-                        Interlocked.Increment(ref errors);
-                    
+                    if (tick != 0)
+                    {
+                        var elapsed = Environment.TickCount - tick;
+                        if (elapsed < 450)
+                            Interlocked.Increment(ref errors);
+                        if (elapsed > 550)
+                            Interlocked.Increment(ref errors);
+                    }
                     tick = Environment.TickCount;
+
                 });
 
             var source = new QuotesSource(mockModel.Object);
             
-            tick = Environment.TickCount;
             source.Start(500);
             Thread.Sleep(3000);
             source.Stop();

@@ -21,7 +21,7 @@ namespace TradingServer.Server
             this.mySync = sync;
         }
 
-        public async void HandleConnectionAsync(TcpClient tcpClient)
+        public async Task HandleConnectionAsync(TcpClient tcpClient)
         {
             string clientInfo = tcpClient.Client.RemoteEndPoint.ToString();
             Console.Out.WriteLine("Got connection request from {0}", clientInfo);
@@ -54,8 +54,12 @@ namespace TradingServer.Server
         private async Task RequestsHandler(StreamReader reader, StreamWriter writer)
         {
             writer.AutoFlush = true;
-
-            IQuotesFormatter formatter = new QuotesRowFormatter();
+            var formatters = new Dictionary<string, IQuotesFormatter>()
+            {
+                {"r", new QuotesRowFormatter()},
+                {"c", new QuotesColumnFormatter()}
+            };
+            var formatter = formatters["r"];
             
             //get all quotes
             await writer.WriteLineAsync(formatter.FormatQuotes(myModel.GetQuotes(DateTime.MinValue)));
@@ -72,15 +76,10 @@ namespace TradingServer.Server
                     var dataFromServer = readerTask.Result;
                     Console.Out.WriteLine(dataFromServer);
 
-                    if (dataFromServer == "r")
+                    if (dataFromServer == "r" || dataFromServer == "c")
                     {
-                        //change fromat to row
-                        formatter = new QuotesRowFormatter();
-                    }
-                    else if (dataFromServer == "c")
-                    {
-                        //change fromat to column
-                        formatter = new QuotesColumnFormatter();
+                        //change format to row
+                        formatter = formatters[dataFromServer];
                     }
                     else if (dataFromServer == "q")
                     {
@@ -92,11 +91,12 @@ namespace TradingServer.Server
                 else
                 {
                     // timeout logic
-                    var data = formatter.FormatQuotes(myModel.GetQuotes(lastPoolDate));
-                    if (!string.IsNullOrEmpty(data))
+                    var qoutes = myModel.GetQuotes(lastPoolDate);
+                    if (qoutes.Any())
                     {
-                        await writer.WriteLineAsync(data);
-                        lastPoolDate = DateTime.Now;
+                        //if any quote was changed write it to client
+                        await writer.WriteLineAsync(formatter.FormatQuotes(qoutes));
+                        lastPoolDate = qoutes.Max(q=>q.Point);
                     }
 
                 }

@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
 namespace TradingServer.Server
 {
     public interface ITradingServerShell
     {
-        void Run();
+        Task Run();
         void Stop();
     }
 }

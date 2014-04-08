@@ -15,9 +15,9 @@ namespace TradingServer.Model
         void UpdateQuote(Quote quoteValuePoint);
 
         /// <summary>
-        /// get quotes from point of time
+        /// get quotes from point of time, will be returned data with date > then fromPoint
         /// </summary>
-        /// <param name="fromPoint"></param>
+        /// <param name="fromPoint">low limit of dates</param>
         /// <returns></returns>
         IEnumerable<Quote> GetQuotes(DateTime fromPoint);
     }

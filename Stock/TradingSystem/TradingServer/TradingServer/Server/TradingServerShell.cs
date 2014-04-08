@@ -34,8 +34,10 @@ namespace TradingServer
 
 
 
-
-        public async void Run()
+        /// <summary>
+        /// run server to listen clients
+        /// </summary>
+        public async Task Run()
         {
             mySource.Start(myConfig.QuotesSourceFrequency);
 
@@ -50,7 +52,7 @@ namespace TradingServer
                     var tcpClient = await myListener.AcceptTcpClientAsync();
                     if(ClientListener!=null)
                     {
-                        ClientListener.HandleConnectionAsync(tcpClient);
+                        var clientTask = ClientListener.HandleConnectionAsync(tcpClient);
                     }
                 }
             }
@@ -79,7 +81,7 @@ namespace TradingServer
             // running the listener is "host.contoso.com".
             //var ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());
             //var ipAddress = ipHostInfo.AddressList[0];
-            return new IPEndPoint(IPAddress.Any, 3333);
+            return new IPEndPoint(IPAddress.Any, myConfig.ServerPort);
         }
 
 

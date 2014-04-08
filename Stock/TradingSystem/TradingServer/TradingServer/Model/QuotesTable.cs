@@ -28,7 +28,7 @@ namespace TradingServer.Model
 
         public IEnumerable<Quote> GetQuotes(DateTime fromPoint)
         {
-            return  myQuotesStorage.Values.Where(q => q.Point >= fromPoint).ToList();
+            return  myQuotesStorage.Values.Where(q => q.Point > fromPoint).ToList();
         }
     }
 }
